@@ -1,0 +1,175 @@
+{% extends 'base_page_2.html' %}
+
+{% block title %}
+	Интернет магазин Smoke Element: Главная страница
+{% endblock %}
+
+
+{% block content %}
+
+	<div class="container">
+		<div class="block">
+			<img src="{{ url_for('static', filename='ugol2.png') }}" alt="banner">
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="is-flex is-justify-content-space-between is-align-content-center m-6">
+			<div class="is-flex">
+				<div class="mr-2">
+					<i class="fa-solid fa-truck fa-2xl" style="color: #ff623e;"></i>
+				</div>
+				<div class="is-size-6 has-text-weight-semibold">
+					Доставка за 24 часа
+				</div>
+			</div>
+			<div class="is-flex">
+				<div class="mr-2">
+					<i class="fa-solid fa-list-check fa-2xl" style="color: #ff623e;"></i>
+				</div>
+				<div class="is-size-6 has-text-weight-semibold">
+					Огромный выбор
+				</div>
+			</div>
+			<div class="is-flex">
+				<div class="mr-2">
+					<i class="fa-solid fa-certificate fa-2xl" style="color: #ff623e;"></i>
+				</div>
+				<div class="is-size-6 has-text-weight-semibold">
+					Гарантия качества
+				</div>
+			</div>
+			<div class="is-flex">
+				<div class="mr-2">
+					<i class="fa-solid fa-percent fa-2xl" style="color: #ff623e;"></i>
+				</div>
+				<div class="is-size-6 has-text-weight-semibold">
+					Бонусная программа
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="is-flex is-justify-content-space-around hover-image-scale">
+			<div class="pr-2 pb-3">
+				<img src="{{ url_for('static', filename='hookah2.png') }}" alt="Lo2o">
+			</div>
+			<div class="pr-2 pl-2 pb-3">
+				<img src="{{ url_for('static', filename='ugli2.png') }}" alt="Logo">
+			</div>
+			<div class="pl-2 pb-3">
+				<img src="{{ url_for('static', filename='tobaccos2.png') }}" alt="Logo">
+			</div>
+		</div>
+		<div class="is-flex is-justify-content-space-around hover-image-scale">
+			<div class="pr-2">
+				<img src="{{ url_for('static', filename='bowls2.png') }}" alt="Logo">
+			</div>
+			<div class="pr-2 pl-2">
+				<img src="{{ url_for('static', filename='access2.png') }}" alt="Logo">
+			</div>
+			<div class="pl-2">
+				<img src="{{ url_for('static', filename='kolba2.png') }}" alt="Logo">
+			</div>
+		</div>
+	</div>
+
+	<div class="has-background-link-light pt-6 pb-4">
+		<div class="container">
+			<div class="block">
+				<div class="pb-2 has-text-dark is-size-5 has-text-weight-medium">
+					Специальное предложение
+				</div>
+			</div>
+			<div class="is-flex is-justify-content-space-around">
+				<div class="pr-2 pb-1">
+					<img src="{{ url_for('static', filename='hookah/alpha_hookah/oro.png') }}" alt="Logo">
+				</div>
+				<div class="pr-2 pl-2 pb-1">
+					<img src="{{ url_for('static', filename='hookah/alpha_hookah/oro.png') }}" alt="Logo">
+				</div>
+				<div class="pr-2 pl-2 pb-1">
+					<img src="{{ url_for('static', filename='hookah/alpha_hookah/oro.png') }}" alt="Logo">
+				</div>
+				<div class="pl-2 pb-1">
+					<img src="{{ url_for('static', filename='hookah/alpha_hookah/oro.png') }}" alt="Logo">
+				</div>
+			</div>
+			<div class="is-flex is-justify-content-space-around mt-4">
+				<div class="pr-2">
+					<img src="{{ url_for('static', filename='hookah/alpha_hookah/oro.png') }}" alt="Logo">
+				</div>
+				<div class="pr-2 pl-2">
+					<img src="{{ url_for('static', filename='hookah/alpha_hookah/oro.png') }}" alt="Logo">
+				</div>
+				<div class="pr-2 pl-2">
+					<img src="{{ url_for('static', filename='hookah/alpha_hookah/oro.png') }}" alt="Logo">
+				</div>
+				<div class="pl-2">
+					<img src="{{ url_for('static', filename='hookah/alpha_hookah/oro.png') }}" alt="Logo">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="block">
+			<div class="pt-6 pb-2 has-text-dark is-size-5 has-text-weight-medium">
+				Наши партнеры
+			</div>
+			<div class="is-flex is-justify-content-space-around">
+				<div class="p-6">
+					<img src="{{ url_for('static', filename='logo_partners/alpha-hookah_small.png') }}" alt="Logo">
+				</div>
+				<div class="p-6">
+					<img src="{{ url_for('static', filename='logo_partners/alpha-hookah_small.png') }}" alt="Logo">
+				</div>
+				<div class="p-6">
+					<img src="{{ url_for('static', filename='logo_partners/alpha-hookah_small.png') }}" alt="Logo">
+				</div>
+				<div class="p-6">
+					<img src="{{ url_for('static', filename='logo_partners/alpha-hookah_small.png') }}" alt="Logo">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="has-background-link-light pt-6 pb-6">
+		<div class="container">
+			<div class="block">
+				<div class="pb-2 has-text-dark is-size-5 has-text-weight-medium">
+					Статьи
+				</div>
+			</div>
+			<div class="is-flex is-justify-content-space-around">
+				<div class="pr-2 pb-1">
+					<img src="{{ url_for('static', filename='articles/article1.png') }}" alt="Logo">
+				</div>
+				<div class="pr-2 pl-2 pb-1">
+					<img src="{{ url_for('static', filename='articles/article3.png') }}" alt="Logo">
+				</div>
+				<div class="pr-2 pl-2 pb-1">
+					<img src="{{ url_for('static', filename='articles/article3.png') }}" alt="Logo">
+				</div>
+			</div>
+			<div class="block">
+				<div class="pb-4 pt-6 has-text-dark is-size-5 has-text-weight-medium">
+					Отзывы
+				</div>
+			</div>
+			<div class="is-flex is-justify-content-space-around">
+				<div class="pr-2 pb-1">
+					<img src="{{ url_for('static', filename='articles/article1.png') }}" alt="Logo">
+				</div>
+				<div class="pr-2 pl-2 pb-1">
+					<img src="{{ url_for('static', filename='articles/article3.png') }}" alt="Logo">
+				</div>
+				<div class="pr-2 pl-2 pb-1">
+					<img src="{{ url_for('static', filename='articles/article3.png') }}" alt="Logo">
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

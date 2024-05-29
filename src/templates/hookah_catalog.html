@@ -1,0 +1,108 @@
+{% extends 'base_catalog_page.html' %}
+
+{% block title %}
+	Интернет магазин Smoke Element: Кальяны
+{% endblock title %}
+
+{% block leftside %}
+	<div class="columns">
+		<div class="column is-8">
+			<div class="ml-5 mt-6">
+				<form action="{{ url_for('filter_hookahs') }}" method="POST">
+					{% for field in form if field.widget.input_type != 'hidden' %}
+						<div class="field">
+							{{ field.label(class='label') }}
+							<div class="control">
+								{% if field.type == 'MultiCheckboxField' %}
+									{{ field() }}
+								{% else %}
+									{{ field(class='input') }}
+								{% endif %}
+							</div>
+						</div>
+					{% endfor %}
+					<button class="button">
+						отправить
+					</button>
+				</form>
+			</div>
+		</div>
+		<div class="column is-4"></div>
+	</div>
+{% endblock leftside %}
+
+{% block rightside %}
+	<div class="is-flex is-justify-content-space-between is-flex-wrap-wrap">
+		{% for hookah in hookahs %}
+			<div class="mt-6 outer">
+				<div class="hide-on-hover">
+					<div>
+						<figure>
+							<img class="img" src="/static/hookah/{{ hookah.img }}" alt=""/>
+						</figure>
+					</div>
+					<div>
+						<p>
+							{{ hookah.name }}
+						</p>
+					</div>
+					<div>
+						<p>
+							{{ hookah.price }}
+						</p>
+					</div>
+				</div>
+				<div class="show-on-hover">
+					Описание товара
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="mt-6">
+		<nav class="pagination" role="navigation" aria-label="pagination">
+			{% if n > 0 %}
+				<a href="{{ url_for('hookahs', n = n - 1, **args) }}" class="pagination-previous">
+					Предыдущая
+				</a>
+			{% else %}
+				<a href="#" class="pagination-previous is-disabled">
+					Предыдущая
+				</a>
+			{% endif %}
+			{% if n < 6 %}
+				<a href="{{ url_for('hookahs', n = n + 1, **args) }}" class="pagination-next">
+					Следующая
+				</a>
+			{% else %}
+				<a href="#" class="pagination-next is-disabled">
+					Следующая
+				</a>
+			{% endif %}
+
+			<ul class="pagination-list">
+				<li>
+					<a href="{{ url_for('hookahs', n = 1) }}" class="pagination-link" aria-label="Goto page 1">1</a>
+				</li>
+				<li>
+					<span class="pagination-ellipsis">&hellip;</span>
+				</li>
+				<li>
+					<a href="{{ url_for('hookahs', n = 3) }}" class="pagination-link" aria-label="Goto page 3">3</a>
+				</li>
+				<li>
+					<a class="pagination-link is-current" aria-label="Page 4" aria-current="page">4</a>
+				</li>
+				<li>
+					<a href="{{ url_for('hookahs', n = 5) }}" class="pagination-link" aria-label="Goto page 5">5</a>
+				</li>
+				<li>
+					<span class="pagination-ellipsis">&hellip;</span>
+				</li>
+				<li>
+					<a href="{{ url_for('hookahs', n = 7) }}" class="pagination-link" aria-label="Goto page 7">7</a>
+				</li>
+			</ul>
+
+		</nav>
+	</div>
+{% endblock rightside %}

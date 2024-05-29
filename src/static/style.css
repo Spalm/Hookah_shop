@@ -1,0 +1,60 @@
+.hover-image-scale {
+  overflow: hidden; /* Скрываем всё за контуром */
+}
+.hover-image-scale img {
+  transition: 0.5s; /* Время эффекта */
+}
+.hover-image-scale img:hover {
+  transform: scale(1.05); /* Увеличиваем масштаб */
+}
+
+.navbar-main-menu-bg-color{
+  background-color: #f0f2fe;
+}
+
+.navbar-main-menu-bg-color:hover{
+  background-color: #fd7555;
+}
+
+.navbar-main-menu-text-color{
+  color: #303030;
+}
+
+.navbar-main-menu-text-color:hover{
+  color: #ffffff;
+}
+
+.outer{
+  min-width: 265px;
+  min-height: 380px;
+  position: relative;
+  border: 1px solid lightgray;
+}
+
+.show-on-hover {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  border: 1px solid black;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.outer:hover > .show-on-hover {
+  opacity: 1;
+}
+
+.outer > .hide-on-hover {
+  display: block;
+}
+
+.outer:hover > .hide-on-hover {
+  opacity: 0.2;
+}
+
+.img {
+  max-width: 305px;
+}

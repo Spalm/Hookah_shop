@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> {% block title %} {% endblock %} </title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+	<link rel="stylesheet" href={{ url_for('static', filename='style.css') }}>
+	<script src="https://kit.fontawesome.com/9f0d5e374e.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/htmx.org@1.9.8"
+	        integrity="sha384-rgjA7mptc2ETQqXoYC3/zJvkU7K/aP44Y+z7xQuJiVnB/422P/Ak+F/AqFR7E4Wr"
+	        crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container mt-2">
+		<div class="columns">
+			<div class="column is-3">
+				<div>
+					<a href="{{ url_for('index') }}">
+						<img src="{{ url_for('static', filename='logo4.png') }}" alt="Logo">
+					</a>
+				</div>
+			</div>
+			<div class="column is-9 mt-2">
+				<div class="is-flex is-justify-content-space-between is-align-items-center">
+					<div class="is-flex is-align-items-center">
+						Интернет-магазин<br>табаков и кальянов
+					</div>
+					<div class="field">
+						<div class="control has-icons-right">
+							<input class="input is-normal" type="text" placeholder="Поиск">
+							<span class="icon is-small is-right">
+						<i class="fas fa-magnifying-glass"></i>
+					</span>
+						</div>
+					</div>
+					<div>
+						<div class="is-size-5">
+							Телефон:<br>
+							<span class="has-text-weight-semibold">+7 (921) 905-65-01</span>
+						</div>
+						<div class="has-text-centered">
+					<span class="icon mr-4">
+						<i class="fa-brands fa-whatsapp fa-xl" style="color: #03cc00;"></i>
+					</span>
+							<span class="icon">
+				        <i class="fa-brands fa-telegram fa-xl" style="color: #007fe0;"></i>
+					</span>
+						</div>
+					</div>
+					<div class="has-background-link-light px-5 py-3">
+						<div class="is-flex is-justify-content-space-between is-align-items-center">
+							<div class="has-text-right">
+						<span class="icon">
+							<i class="fas fa-circle-user"></i>
+						</span>
+							</div>
+							<div class="has-text-left">
+								<a href="#" class="button is-normal is-ghost has-text-black p-0">Войти</a>
+							</div>
+						</div>
+						<div class="has-text-centered">
+							Корзина
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="has-background-link-light">
+		<div class="container">
+			<div class="is-flex is-justify-content-space-between">
+				<div class="is-flex is-justify-content-space-around">
+					<div class="navbar-main-menu-bg-color navbar-main-menu-text-color">
+						<a href="{{ url_for('hookahs') }}"
+						   class="px-5 is-size-6 is-inline-block p-2 has-text-weight-semibold navbar-main-menu-text-color has-text-centered">КАЛЬЯНЫ</a>
+					</div>
+					<div class="navbar-main-menu-bg-color is-align-content-center">
+						<a href="#"
+						   class="px-5 is-size-6 is-inline-block p-2 has-text-weight-semibold navbar-main-menu-text-color has-text-centered">ТАБАКИ</a>
+					</div>
+					<div class="navbar-main-menu-bg-color is-align-content-center">
+						<a href="#"
+						   class="px-5 is-size-6 is-inline-block p-2 has-text-weight-semibold navbar-main-menu-text-color has-text-centered">УГОЛЬ</a>
+					</div>
+					<div class="navbar-main-menu-bg-color is-align-content-center">
+						<a href="#"
+						   class="px-5 is-size-6 is-inline-block p-2 has-text-weight-semibold navbar-main-menu-text-color has-text-centered">ЧАШИ</a>
+					</div>
+					<div class="navbar-main-menu-bg-color is-align-content-center">
+						<a href="#"
+						   class="px-5 is-size-6 is-inline-block p-2 has-text-weight-semibold navbar-main-menu-text-color has-text-centered">АКСЕССУАРЫ</a>
+					</div>
+					<div class="navbar-main-menu-bg-color is-align-content-center">
+						<a href="#"
+						   class="px-5 is-size-6 is-inline-block p-2 has-text-weight-semibold navbar-main-menu-text-color has-text-centered">КОЛБЫ</a>
+					</div>
+				</div>
+				<div class="is-flex is-justify-content-space-around">
+					<div class="navbar-main-menu-bg-color is-align-content-center">
+						<a href="#"
+						   class="px-5 is-size-6 is-inline-block p-2 has-text-weight-semibold navbar-main-menu-text-color has-text-centered">ДОСТАВКА</a>
+					</div>
+					<div class="navbar-main-menu-bg-color is-align-content-center">
+						<a href="#"
+						   class="px-5 is-size-6 is-inline-block p-2 has-text-weight-semibold navbar-main-menu-text-color has-text-centered">ОПЛАТА</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container mb-6">
+		{% block content %}{% endblock %}
+	</div>
+	<div class="has-background-dark pt-6 pb-4">
+		<div class="container">
+			<div class="block">
+				<div class="pb-6 pt-6 has-text-white is-size-2 has-text-weight-medium">
+					Footer
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
